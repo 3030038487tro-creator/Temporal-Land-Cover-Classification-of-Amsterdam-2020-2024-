@@ -1,6 +1,6 @@
-![banner](Figures/Unsupervised K-means Cluster Maps.png)
+![banner](Figures/Unsupervised_K-means_Cluster_Maps.png)
 
-![banner](Figures/Supervised RF Classification Maps.png)
+![banner](Figures/Supervised_RF_Classification_Maps.png)
 
 # Temporal-Land-Cover-Classification-of-Amsterdam-2020-2024-
 Land Cover Classification of Amsterdam (2020-2024) using Random Forest and Sentinel-2 imagery. Features multi-temporal analysis, spectral index engineering (NDVI/NDWI/NDBI), and comparison with K-Means clustering.

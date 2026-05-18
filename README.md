@@ -29,13 +29,13 @@ The study assesses accuracy, temporal consistency and carbon footprint, demonstr
 ---
 
 ## 1  Project Motivation and Background
-Urban environments present some of the most spectrally complex scenes in satellite imagery. Buildings, roads, vegetation, water and bare surfaces are frequently inter-mingled at the pixel level, making automated land-cover classification in cities a persistent challenge (Weng, 2012). The ability to monitor urban form and change over time is increasingly vital for climate adaptation, infrastructure planning and environmental monitoring (UN-Habitat, 2020).
+Urban land-cover mapping remains a significant challenge in remote sensing due to high spectral heterogeneity and the prevalence of "mixed pixels" in dense cityscapes (Weng, 2012). As urban areas like Amsterdam face increasing pressure from climate change and densification, precise monitoring of land-use dynamics is essential for sustainable development (UN-Habitat, 2020).
 
-Traditionally, supervised machine-learning approaches such as **Random Forests** rely on labelled training samples to learn class distinctions. However, acquiring high-quality labelled data is time-consuming and subjective, especially in heterogeneous urban areas where semantic boundaries are often unclear. **Unsupervised methods** such as **K-means clustering** offer a complementary alternative, grouping pixels solely on spectral similarity. While typically less interpretable, they may detect subtle patterns or transitions missed by supervised models.
+While Supervised algorithms, particularly Random Forest (RF), are widely praised for their ability to handle high-dimensional satellite data and provide robust classification (Belgiu & Drăguţ, 2016), they are inherently limited by the availability and quality of labeled training samples. In contrast, Unsupervised techniques like K-means clustering offer a "data-driven" alternative that groups pixels based on intrinsic spectral similarities without prior knowledge (Gorelick et al., 2017).
 
-This project explores both approaches by applying a Random Forest and an unsupervised K-means algorithm to five years of Sentinel-2 imagery over the Borough of Waltham Forest in north-east London. It compares not only classification accuracy and spatial patterns, but also temporal consistency and environmental cost. In doing so, the project asks:
+This project utilizes Sentinel-2 multi-spectral imagery to conduct a comparative study of RF and K-means over Amsterdam (2020–2024). Beyond mere pixel accuracy, this research evaluates feature importance—specifically the role of Short-Wave Infrared (SWIR) bands in urban discrimination—as well as the computational environmental cost of each method. By doing so, the project investigates:
 
-> *How do supervised and unsupervised methods differ in their representation of urban land cover, and can clustering provide a more flexible, low-emission alternative in data-scarce settings?*
+> *whether unsupervised clustering can serve as a reliable, low-emission proxy for urban monitoring in scenarios where high-quality ground truth labels are scarce?*
 
 <div align="center">
   <img src="figures/study_area.png" width="600" alt="Study area map showing the London Borough of Waltham Forest"/>
@@ -45,12 +45,12 @@ This project explores both approaches by applying a Random Forest and an unsuper
 ---
 
 ## 2  Data Source and Pre-processing
-This project uses **Sentinel-2 Level-2A surface-reflectance imagery** (Copernicus Open Access Hub) to generate annual composites for land-cover classification.
+The project utilizes **Sentinel-2 Level-2A (Surface Reflectance) data** accessed via the Google Earth Engine (GEE) data catalog.
 
 | Step | Detail |
 |------|--------|
 | **Time window** | April–August each year (2020–2024) – peak “leaf-on” season improves spectral contrast. |
-| **Spectral bands** | B2 (Blue), B3 (Green), B4 (Red), B8 (NIR), B11 (SWIR1), B12 (SWIR2) plus derived **NDVI** and **NDBI**. |
+| **Spectral bands** | B2 (Blue), B3 (Green), B4 (Red), B8 (NIR), B11 (SWIR1), B12 (SWIR2) plus derived **NDVI** **NDWI** and **NDBI**. |
 | **Cloud & shadow masking** | Sentinel-2 Scene Classification Layer (SCL) used to exclude clouds, cirrus and their shadows. |
 | **Radiometric normalisation** | Pixel values clipped to the 2nd–98th percentile and scaled to \[0, 1] using 2021 as the reference year. |
 | **Area of interest** | Administrative boundary for Waltham Forest (geoBoundaries ADM2). |

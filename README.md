@@ -1,4 +1,5 @@
 ![banner](Figures/Unsupervised K-means Cluster Maps.png)
+
 ![banner](Figures/Supervised RF Classification Maps.png)
 
 # Temporal-Land-Cover-Classification-of-Amsterdam-2020-2024-

@@ -1,4 +1,4 @@
-![banner](Figures/Unsupervised_K_means_Cluster_Maps.png)
+![banner](Figures/Unsupervised_K-means_Cluster_Maps.png)
 
 ![banner](Figures/Supervised_RF_Classification_Maps.png)
 

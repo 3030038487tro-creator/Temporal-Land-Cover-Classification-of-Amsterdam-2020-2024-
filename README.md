@@ -53,7 +53,7 @@ The project utilizes **Sentinel-2 Level-2A (Surface Reflectance) data** accessed
 | **Spectral bands** | B2 (Blue), B3 (Green), B4 (Red), B8 (NIR), B11 (SWIR1), B12 (SWIR2) plus derived **NDVI** **NDWI** and **NDBI**. |
 | **Cloud & shadow masking** | Sentinel-2 Scene Classification Layer (SCL) used to exclude clouds, cirrus and their shadows. |
 | **Radiometric normalisation** | Pixel values clipped to the 2nd–98th percentile and scaled to \[0, 1] using 2021 as the reference year. |
-| **Area of interest** | Administrative boundary for Waltham Forest (geoBoundaries ADM2). |
+| **Area of interest** | The administrative boundary of Amsterdam (Municipality of Amsterdam) was sourced from the geoBoundaries Global Database (ADM2). |
 
 All processing steps are executed in  **`01_preprocessing.ipynb`**, exporting yearly 8-band 10 m GeoTIFFs to Google Drive.
 
@@ -69,12 +69,13 @@ Both models share the pre-processing pipeline described above and then diverge a
 </div>
 
 * **Sample & scale** 50 000 pixels from the 2021 composite are scaled (StandardScaler).  
-* **Cluster selection** *k* = 4 chosen via elbow and silhouette scores.  
+* **Cluster selection** *k* = 5  chosen via elbow and silhouette scores.  
 * **Semantic interpretation** Clusters are post-labelled as 
-  0 Urban (roads/residential)  
-  1 Vegetation  
-  2 Industrial/Light roofs  
-  3 Open water
+    0: "Forest ",
+    1: "Industrial/Light Roofs ",
+    2: "Grassland/Wetland ",
+    3: "Urban ",
+    4: "Water
 
 <div align="center">
   <img src="figures/how_kmeans_works.png" width="520" alt="Schematic of K-means clustering"/>
@@ -94,10 +95,10 @@ Both models share the pre-processing pipeline described above and then diverge a
 
   | Metric | Score |
   |--------|------:|
-  | Overall accuracy | 0.81 |
-  | Cohen’s κ | 0.72 |
-  | F1 (urban) | 0.77 |
-  | F1 (water) | 0.93 |
+  | Overall accuracy | 0.82 |
+  | Cohen’s κ | 0.78 |
+  | F1 (urban) | 0.74 |
+  | F1 (water) | 0.95 |
 
 Random Forest offers robust classification performance, particularly for stable land types like water. However it tends to merge spectrally distinct urban subclasses that K-means keeps separate.
 
@@ -141,10 +142,10 @@ Random Forest offers robust classification performance, particularly for stable 
 
 | Class | Random Forest (%) | K-means (%) | Comment |
 |-------|------------------:|------------:|---------|
-| Urban | 39.43 | 48.48 | RF underestimates urban compared to K-means |
-| Industrial | 0.00 | 6.16 | RF merges this into general urban, K-Means separates it |
-| Vegetation | 53.65 | 39.39 | RF likely over-assigns vegetated pixels |
-| Water | 6.92 | 5.97 | High agreement between methods |
+| Urban | 28.27 | 32.26 | RF underestimates urban compared to K-means |
+| Industrial | 5.08 | 8.4 | RF merges this into general urban, K-Means separates it |
+| Vegetation | 47.51 | 46.65 | RF likely over-assigns vegetated pixels |
+| Water | 19.15 | 12.69 | High agreement between methods |
 
 #### 5.2  Key Insights and Observations
 * **Urban spectral sub-types** K-means reveals an additional cluster, industrial/light-roofed buildings (e.g., schools, depots), missed by RF. These have distinct spectral traits (low NIR, high SWIR), adding structural detail without semantic labels. RF provides clearer classes but may overlook such intra-urban variation.
@@ -163,15 +164,15 @@ Random Forest offers robust classification performance, particularly for stable 
 ## 6  Environmental Cost
 This project incorporates environmental accountability by tracking the computational energy usage and estimated carbon emissions associated with each stage of the workflow. While the emissions are minimal in absolute terms, the broader goal is to cultivate sustainable habits in spatial computing and remote sensing research.
 
-| Stage           | Runtime (hrs) | Energy (kWh) |  CO₂e (g) |    Cost (£) | Notes                   |
+| Stage           | Runtime (hrs) | Energy (kWh) |  CO₂e (g) |    Cost (€) | Notes                   |
 | --------------- | ------------: | -----------: | --------: | ----------: | ----------------------- |
-| Preprocessing   |        0.0280 |     0.000560 |     0.131 |      0.0002 | GEE export + rescaling  |
-| K-Means (k = 4) |        0.1145 |     0.002289 |     0.533 |      0.0007 | Cluster fit + inference |
-| Random Forest   |        0.0646 |     0.001292 |     0.301 |      0.0004 | Train, predict, compare |
-| **Total**       |    **0.2071** | **0.004141** | **0.965** | **£0.0013** | All stages, CPU only    |
+| Preprocessing   |        0.0254 |     0.000507 |     0.165 |      0.0002 | GEE export + rescaling  |
+| K-Means (k = 4) |        0.1418 |     0.002836 |     0.922 |      0.0010 | Cluster fit + inference |
+| Random Forest   |        0.1384 |     0.002768 |     0.900 |      0.0010 | Train, predict, compare |
+| **Total**       |    **0.3056** | **0.006111** | **1.987** | **£0.0022** | All stages, CPU only    |
 
 
-*Assumptions: 20 W CPU, 0.233 kg CO₂/kWh (UK grid), £0.30/kWh.*
+*Assumptions: 20 W CPU, 0.325 kg CO₂/kWh (Netherlands grid average), €0.35/kWh.*
 
 At just under **1 g CO₂e**, the entire analysis emitted less than:
 

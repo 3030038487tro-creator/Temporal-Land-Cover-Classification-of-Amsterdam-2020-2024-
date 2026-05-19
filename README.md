@@ -68,9 +68,9 @@ Both models share the pre-processing pipeline described above and then diverge a
   <p><em>Figure&nbsp;2 K-means clustering workflow (see <code>02_unsupervised_kmeans.ipynb</code>).</em></p>
 </div>
 
-* **Sample & scale** 50 000 pixels from the 2021 composite are scaled (StandardScaler).  
-* **Cluster selection** *k* = 5  chosen via elbow and silhouette scores.  
-* **Semantic interpretation** Clusters are post-labelled as 
+* **Sample & scale** 50 000 pixels from the 2021 composite are scaled (StandardScaler). K-means relies on Euclidean distance. Since the Near-Infrared (NIR) band often has higher reflectance values than the Blue band, the data must be scaled.
+* **Cluster selection** *k* = 5  To avoid arbitrary selection, the Elbow Method is used by plotting the Within-Cluster Sum of Squares (WCSS) against various values of $k$.
+* **Semantic interpretation** By comparing the cluster's mean spectral signature to known land-cover profiles (e.g., Water has low NIR; Vegetation has high NIR), we manually assign labels:
     0: "Forest ",
     1: "Industrial/Light Roofs ",
     2: "Grassland/Wetland ",
@@ -89,8 +89,8 @@ Both models share the pre-processing pipeline described above and then diverge a
 </div>
 
 * **Training data** 250 points × 4 classes from **ESA WorldCover 2021**.  
-* **Model** 300-tree Random Forest, 80/20 train–test split, class-balanced.  
-* **Feature importance** Computed with SHAP.  
+* **Model** 300-tree Random Forest, An **80/20 train-test split** was employed. The model was trained on a balanced dataset to prevent bias toward the dominant 'Urban' class.
+* **Feature importance** We utilized SHAP (SHapley Additive exPlanations) values. Unlike traditional "Gini importance," SHAP provides a more nuanced view of how each spectral band contributes to a specific pixel's classification.
 * **Performance on 2021 hold-out set**
 
   | Metric | Score |
@@ -100,7 +100,7 @@ Both models share the pre-processing pipeline described above and then diverge a
   | F1 (urban) | 0.74 |
   | F1 (water) | 0.95 |
 
-Random Forest offers robust classification performance, particularly for stable land types like water. However it tends to merge spectrally distinct urban subclasses that K-means keeps separate.
+Random Forest offers robust classification and superior stability for consistent features like water. However, it relies heavily on prior labels and may merge spectrally distinct urban subclasses (e.g., different roofing materials) that K-means clustering successfully keeps separate due to its sensitivity to raw spectral variance.
 
 ---
 

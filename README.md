@@ -169,7 +169,7 @@ This project incorporates environmental accountability by tracking the computati
 | Preprocessing   |        0.0254 |     0.000507 |     0.165 |      0.0002 | GEE export + rescaling  |
 | K-Means (k = 4) |        0.1418 |     0.002836 |     0.922 |      0.0010 | Cluster fit + inference |
 | Random Forest   |        0.1384 |     0.002768 |     0.900 |      0.0010 | Train, predict, compare |
-| **Total**       |    **0.3056** | **0.006111** | **1.987** | **£0.0022** | All stages, CPU only    |
+| **Total**       |    **0.3056** | **0.006111** | **1.987** | **€0.0022** | All stages, CPU only    |
 
 
 *Assumptions: 20 W CPU, 0.325 kg CO₂/kWh (Netherlands grid average), €0.35/kWh.*

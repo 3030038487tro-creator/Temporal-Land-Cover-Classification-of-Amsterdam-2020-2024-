@@ -38,11 +38,12 @@ This project utilizes Sentinel-2 multi-spectral imagery to conduct a comparative
 > *whether unsupervised clustering can serve as a reliable, low-emission proxy for urban monitoring in scenarios where high-quality ground truth labels are scarce?*
 
 <div align="center">
-  <img src="figures/Netherlands.jpg" width="600" alt="Study area map showing Netherlands"/>
+  <img src="Figures/Netherlands.jpg" width="600" alt="Study area map showing Netherlands"/>
   <p><em>Figure&nbsp;1 Study area – Netherlands (map produced in QGIS).</em></p>
 </div>
+
 <div align="center">
-  <img src="figures/Amsterdam.png" width="600" alt="Study area map showing Amsterdam"/>
+  <img src="Figures/Amsterdam.png" width="600" alt="Study area map showing Amsterdam"/>
   <p><em>Figure 2: Study area – the Municipality of Amsterdam, Netherlands (map produced in QGIS).</em></p>
 </div>
 ---

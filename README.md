@@ -68,7 +68,7 @@ Both models share the pre-processing pipeline described above and then diverge a
 
 ### <a id="31-unsupervised-k-means"></a>3.1  Unsupervised K-Means
 <div align="center">
-  <img src="figures/unsupervised_pipeline.png" width="780" alt="Flow diagram of the K-means workflow"/>
+  <img src="Figures/unsupervised_pipeline.png" width="780" alt="Flow diagram of the K-means workflow"/>
   <p><em>Figure&nbsp;2 K-means clustering workflow (see <code>02_unsupervised_kmeans.ipynb</code>).</em></p>
 </div>
 
@@ -88,7 +88,7 @@ Both models share the pre-processing pipeline described above and then diverge a
 
 ### <a id="32-supervised-random-forest"></a>3.2  Supervised Random Forest
 <div align="center">
-  <img src="figures/supervised_pipeline.png" width="780" alt="Flow diagram of the Random-Forest workflow"/>
+  <img src="Figures/supervised_pipeline.png" width="780" alt="Flow diagram of the Random-Forest workflow"/>
   <p><em>Figure&nbsp;4 Random-Forest workflow (see <code>03_supervised_randomforest.ipynb</code>).</em></p>
 </div>
 
@@ -123,19 +123,19 @@ Random Forest offers robust classification and superior stability for consistent
 <table>
 <tr><th style="text-align:center">Figure</th><th>Description</th></tr>
 <tr>
-<td><img src="figures/kmeans_cluster_maps.gif" width="300" alt="Animated K-means maps"/></td>
+<td><img src="Figures/kmeans_cluster_maps.gif" width="300" alt="Animated K-means maps"/></td>
 <td><strong>Figure 5.</strong> K-means classifications (2020 → 2024), shown as an animated GIF to illustrate year-on-year change.</td>
 </tr>
 <tr>
-<td><img src="figures/rf_classification.gif" width="300" alt="Animated RF maps"/></td>
+<td><img src="Figures/rf_classification.gif" width="300" alt="Animated RF maps"/></td>
 <td><strong>Figure 6.</strong> Random-Forest classifications (2020 → 2024), shown as an animated GIF to illustrate year-on-year change.</td>
 </tr>
 <tr>
-<td><img src="figures/rf_kmeans_change_maps.png" width="1500" alt="Change maps"/></td>
+<td><img src="Figures/rf_kmeans_change_maps.png" width="1500" alt="Change maps"/></td>
 <td><strong>Figure 7.</strong> Urban gain (red) and vegetation loss (yellow), 2020–2024. RF detects more change due to its sensitivity to subtle spectral shifts; K-means is more conservative and stable in its outputs.</td>
 </tr>
 <tr>
-<td><img src="figures/rf_feature_importance.png" width="300" alt="Feature importance chart"/></td>
+<td><img src="Figures/rf_feature_importance.png" width="300" alt="Feature importance chart"/></td>
 <td><strong>Figure 8.</strong> Feature importance from the Random Forest model. NIR and SWIR2 dominate.</td>
 </tr>
 

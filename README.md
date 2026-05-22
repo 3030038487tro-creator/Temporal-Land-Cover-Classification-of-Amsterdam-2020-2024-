@@ -82,7 +82,7 @@ Both models share the pre-processing pipeline described above and then diverge a
     4: "Water
 
 <div align="center">
-  <img src="figures/how_kmeans_works.png" width="520" alt="Schematic of K-means clustering"/>
+  <img src="Figures/Conceptual_diagram_of_K-means_clustering.png" width="520" alt="Schematic of K-means clustering"/>
   <p><em>Figure&nbsp;3 Conceptual diagram of K-means clustering.</em></p>
 </div>
 

@@ -41,11 +41,11 @@ This project utilizes Sentinel-2 multi-spectral imagery to conduct a comparative
   <img src="Figures/Netherlands.jpg" width="600" alt="Study area map showing Netherlands"/>
   <p><em>Figure&nbsp;1 Study area – Netherlands (map produced in QGIS).</em></p>
 </div>
-
 <div align="center">
   <img src="Figures/Amsterdam.png" width="600" alt="Study area map showing Amsterdam"/>
   <p><em>Figure 2: Study area – the Municipality of Amsterdam, Netherlands (map produced in QGIS).</em></p>
 </div>
+
 ---
 
 ## 2  Data Source and Pre-processing

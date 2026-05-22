@@ -206,15 +206,26 @@ This repository was developed as a final project for the UCL undergraduate modul
 Special thanks to **Dr Michel Tsamados**, **Weibin Chen** and **Connor Nelson** for the original notebooks and teaching materials that formed the basis for this work.
 
 ### 8.1  Reference List 
-* Bouza Heguerte, L., Bugeau, A. and Lannelongue, L. (2023) ‘How to estimate carbon footprint when training deep learning models? A guide and review’, *Environmental Research Communications*. Available at: <https://doi.org/10.1088/2515-7620/acf81b>   
-* Google (2024) *2024 Environmental Report*. Available at: <https://blog.google/outreach-initiatives/sustainability/2024-environmental-report/>   
-* Google (n.d.) *Innovating sustainable ideas, growing renewable solutions*. Available at: <https://datacenters.google/operating-sustainably/> 
-* Medium (2024) ‘Understanding how K-means clustering works – a detailed guide’. Available at: <https://levelup.gitconnected.com/understanding-how-k-means-clustering-works-a-detailed-guide-9a2f8009a279>  
-* Naushad, R. (2023) *Land-cover classification using Sentinel-2 dataset (deep learning)*. GitHub. Available at: <https://github.com/raoofnaushad/Land-Cover-Classification-using-Sentinel-2-Dataset>  
-* Strubell, E., Ganesh, A. and McCallum, A. (2020) ‘Energy and policy considerations for modern deep learning research’, *Proceedings of the AAAI Conference on Artificial Intelligence* Available at: <https://doi.org/10.1609/aaai.v34i09.7123> (Accessed 8 June 2025).  
-* Tingzon, I. and Mahesh, A. (2024) *Land-use and land-cover classification using deep learning* (Tutorial). Climate Change AI Summer School. Available at: <https://doi.org/10.5281/zenodo.11584954> 
-* Tsamados, M. and Chen, W. (2022) *GEOL0069: Artificial Intelligence for Earth Observation – course notebook*. University College London. Available at: <https://cpomucl.github.io/GEOL0069-AI4EO/intro.html> 
-* UN-Habitat (2020) *World Cities Report 2020: The value of sustainable urbanisation*. United Nations Human Settlements Programme. Available at: <https://unhabitat.org/sites/default/files/2020/10/wcr_2020_report.pdf> (Accessed 8 June 2025).  
-* Weng, Q. (2012) ‘Remote sensing of impervious surfaces in urban areas: Requirements, methods and trends’, *Remote Sensing of Environment* Available at: <https://doi.org/10.1016/j.rse.2011.02.030> 
+* Belgiu, M. and Drăguţ, L. (2016) ‘Random forest in remote sensing: A review of applications and future directions’, ISPRS Journal of Photogrammetry and Remote Sensing, 114, pp. 24–31.
+
+* Bouza Heguerte, L., Bugeau, A. and Lannelongue, L. (2023) ‘How to estimate carbon footprint when training deep learning models? A guide and review’, Environmental Research Communications. Available at: https://doi.org/10.1088/2515-7620/acf81b
+
+* Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D. and Moore, R. (2017) ‘Google Earth Engine: Planetary-scale geospatial analysis for everyone’, Remote Sensing of Environment, 202, pp. 18–27.
+
+* Lundberg, S. M. and Lee, S. I. (2017) ‘A Unified Approach to Interpreting Model Predictions’, Advances in Neural Information Processing Systems (NeurIPS), 30.
+
+* Medium (2024) ‘Understanding how K-means clustering works – a detailed guide’. Available at: https://levelup.gitconnected.com/understanding-how-k-means-clustering-works-a-detailed-guide-9a2f8009a279
+
+* Naushad, R. (2023) Land-cover classification using Sentinel-2 dataset (deep learning). GitHub. Available at: https://github.com/raoofnaushad/Land-Cover-Classification-using-Sentinel-2-Dataset
+
+* Strubell, E., Ganesh, A. and McCallum, A. (2020) ‘Energy and policy considerations for modern deep learning research’, Proceedings of the AAAI Conference on Artificial Intelligence. Available at: https://doi.org/10.1609/aaai.v34i09.7123 (Accessed 8 June 2025).
+
+* Tingzon, I. and Mahesh, A. (2024) Land-use and land-cover classification using deep learning (Tutorial). Climate Change AI Summer School. Available at: https://doi.org/10.5281/zenodo.11584954
+
+* Tsamados, M. and Chen, W. (2022) GEOL0069: Artificial Intelligence for Earth Observation – course notebook. University College London. Available at: https://cpomucl.github.io/GEOL0069-AI4EO/intro.html
+
+* UN-Habitat (2020) World Cities Report 2020: The value of sustainable urbanisation. United Nations Human Settlements Programme. Available at: https://unhabitat.org/sites/default/files/2020/10/wcr_2020_report.pdf (Accessed 8 June 2025).
+
+* Weng, Q. (2012) ‘Remote sensing of impervious surfaces in urban areas: Requirements, methods and trends’, Remote Sensing of Environment. Available at: https://doi.org/10.1016/j.rse.2011.02.030
 
 ---

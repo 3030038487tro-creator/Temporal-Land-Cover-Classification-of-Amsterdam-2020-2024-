@@ -127,7 +127,7 @@ Random Forest offers robust classification and superior stability for consistent
 <td><strong>Figure 5.</strong> K-means classifications (2020 → 2024), shown as an animated GIF to illustrate year-on-year change.</td>
 </tr>
 <tr>
-<td><img src="Figures/rf_classification.gif" width="300" alt="Animated RF maps"/></td>
+<td><img src="Figures/RF_Amsterdam_Evolution.gif" width="300" alt="Animated RF maps"/></td>
 <td><strong>Figure 6.</strong> Random-Forest classifications (2020 → 2024), shown as an animated GIF to illustrate year-on-year change.</td>
 </tr>
 <tr>

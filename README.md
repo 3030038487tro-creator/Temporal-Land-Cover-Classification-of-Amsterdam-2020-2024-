@@ -135,7 +135,7 @@ Random Forest offers robust classification and superior stability for consistent
 <td><strong>Figure 7.</strong> Urban gain (red) and vegetation loss (yellow), 2020–2024. RF detects more change due to its sensitivity to subtle spectral shifts; K-means is more conservative and stable in its outputs.</td>
 </tr>
 <tr>
-<td><img src="Figures/rf_Feature_importance_from_the_Random_Forest_model.png" width="300" alt="Feature importance chart"/></td>
+<td><img src="Figures/Feature_importance_from_the_Random_Forest_model.png" width="300" alt="Feature importance chart"/></td>
 <td><strong>Figure 8.</strong> Feature importance from the Random Forest model. NIR and SWIR2 dominate.</td>
 </tr>
 

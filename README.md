@@ -131,7 +131,7 @@ Random Forest offers robust classification and superior stability for consistent
 <td><strong>Figure 6.</strong> Random-Forest classifications (2020 → 2024), shown as an animated GIF to illustrate year-on-year change.</td>
 </tr>
 <tr>
-<td><img src="Figures/rf_kmeans_change_maps.png" width="1500" alt="Change maps"/></td>
+<td><img src="Figures/Land_Cover_Change.png" width="1500" alt="Change maps"/></td>
 <td><strong>Figure 7.</strong> Urban gain (red) and vegetation loss (yellow), 2020–2024. RF detects more change due to its sensitivity to subtle spectral shifts; K-means is more conservative and stable in its outputs.</td>
 </tr>
 <tr>

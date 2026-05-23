@@ -123,7 +123,7 @@ Random Forest offers robust classification and superior stability for consistent
 <table>
 <tr><th style="text-align:center">Figure</th><th>Description</th></tr>
 <tr>
-<td><img src="Figures/kmeans_cluster_maps.gif" width="300" alt="Animated K-means maps"/></td>
+<td><img src="Figures/Amsterdam_kmeans_Time_Lapse.gif" width="300" alt="Animated K-means maps"/></td>
 <td><strong>Figure 5.</strong> K-means classifications (2020 → 2024), shown as an animated GIF to illustrate year-on-year change.</td>
 </tr>
 <tr>

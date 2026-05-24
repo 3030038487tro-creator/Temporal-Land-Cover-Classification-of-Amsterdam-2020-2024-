@@ -69,7 +69,7 @@ Both models share the pre-processing pipeline described above and then diverge a
 ### <a id="31-unsupervised-k-means"></a>3.1  Unsupervised K-Means
 <div align="center">
   <img src="Figures/unsupervised_pipeline.png" width="780" alt="Flow diagram of the K-means workflow"/>
-  <p><em>Figure&nbsp;2 K-means clustering workflow (see <code>02_unsupervised_kmeans.ipynb</code>).</em></p>
+  <p><em>Figure&nbsp;3 K-means clustering workflow (see <code>02_unsupervised_kmeans.ipynb</code>).</em></p>
 </div>
 
 * **Sample & scale** 50 000 pixels from the 2021 composite are scaled (StandardScaler). K-means relies on Euclidean distance. Since the Near-Infrared (NIR) band often has higher reflectance values than the Blue band, the data must be scaled.
@@ -83,13 +83,13 @@ Both models share the pre-processing pipeline described above and then diverge a
 
 <div align="center">
   <img src="Figures/Conceptual_diagram_of_K-means_clustering.png" width="520" alt="Schematic of K-means clustering"/>
-  <p><em>Figure&nbsp;3 Conceptual diagram of K-means clustering.</em></p>
+  <p><em>Figure&nbsp;4 Conceptual diagram of K-means clustering.</em></p>
 </div>
 
 ### <a id="32-supervised-random-forest"></a>3.2  Supervised Random Forest
 <div align="center">
   <img src="Figures/supervised_pipeline.png" width="780" alt="Flow diagram of the Random-Forest workflow"/>
-  <p><em>Figure&nbsp;4 Random-Forest workflow (see <code>03_supervised_randomforest.ipynb</code>).</em></p>
+  <p><em>Figure&nbsp;5 Random-Forest workflow (see <code>03_supervised_randomforest.ipynb</code>).</em></p>
 </div>
 
 * **Training data** 250 points × 4 classes from **ESA WorldCover 2021**.  

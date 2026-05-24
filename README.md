@@ -191,7 +191,7 @@ At just under **2 g CO₂e**, the entire analysis emitted less than:
 
 * **Code efficiency:**  Modular, single-pass pipelines avoided redundancy, and reusable notebooks reduce future re-runs.
 
-* **Scalability concerns:**  Expanding to a full metro area (e.g., Greater London) could multiply emissions ~6×. Choosing carbon-aware Colab region using carbon-aware Colab Pro (e.g., `europe-north1`, `us-west1`) can reduce emissions by up to 80%.
+* **Scalability concerns:**  Expanding to a full metro area (e.g., Amsterdam) could multiply emissions ~6×. Choosing carbon-aware Colab region using carbon-aware Colab Pro (e.g., `europe-north1`, `us-west1`) can reduce emissions by up to 80%.
 
 * **Low-carbon modelling choices:** Unsupervised methods like K-Means offer lower-carbon alternatives in scenarios where labelled data is unavailable or overfitting is a risk.
 

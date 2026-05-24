@@ -124,19 +124,19 @@ Random Forest offers robust classification and superior stability for consistent
 <tr><th style="text-align:center">Figure</th><th>Description</th></tr>
 <tr>
 <td><img src="Figures/Amsterdam_kmeans_Time_Lapse.gif" width="300" alt="Animated K-means maps"/></td>
-<td><strong>Figure 5.</strong> K-means classifications (2020 → 2024), shown as an animated GIF to illustrate year-on-year change.</td>
+<td><strong>Figure 6.</strong> K-means classifications (2020 → 2024), shown as an animated GIF to illustrate year-on-year change.</td>
 </tr>
 <tr>
 <td><img src="Figures/Amsterdam_Colored.gif" width="300" alt="Animated RF maps"/></td>
-<td><strong>Figure 6.</strong> Random-Forest classifications (2020 → 2024), shown as an animated GIF to illustrate year-on-year change.</td>
+<td><strong>Figure 7.</strong> Random-Forest classifications (2020 → 2024), shown as an animated GIF to illustrate year-on-year change.</td>
 </tr>
 <tr>
 <td><img src="Figures/Land_Cover_Change.png" width="1500" alt="Change maps"/></td>
-<td><strong>Figure 7.</strong> Urban gain (red) and vegetation loss (yellow), 2020–2024. RF detects more change due to its sensitivity to subtle spectral shifts; K-means is more conservative and stable in its outputs.</td>
+<td><strong>Figure 8.</strong> Urban gain (red) and vegetation loss (yellow), 2020–2024. RF detects more change due to its sensitivity to subtle spectral shifts; K-means is more conservative and stable in its outputs.</td>
 </tr>
 <tr>
 <td><img src="Figures/Feature_importance_from_the_Random_Forest_model.png" width="300" alt="Feature importance chart"/></td>
-<td><strong>Figure 8.</strong> Feature importance from the Random Forest model. NIR and SWIR2 dominate.</td>
+<td><strong>Figure 9.</strong> Feature importance from the Random Forest model. NIR and SWIR2 dominate.</td>
 </tr>
 
 </table>
@@ -155,7 +155,7 @@ Random Forest offers robust classification and superior stability for consistent
 * **Urban spectral sub-types** K-means reveals an additional cluster, industrial/light-roofed buildings (e.g., schools, depots), missed by RF. These have distinct spectral traits (low NIR, high SWIR), adding structural detail without semantic labels. RF provides clearer classes but may overlook such intra-urban variation.
 * **Vegetation assignment differs** RF maps more vegetation, likely due to its sensitivity to NDVI-rich mixed pixels in semi-urban areas. K-means is stricter, reducing overclassification but risking omission of shaded or sparse vegetation.
 * **Hydrological stability** Both models show <2 % variation in open-water extent.  
-* **Change-detection divergence** RF shows a +14.1 % increase in urban area, while K-means suggests a −7.8 % decrease. The RF model, trained on static labels, offers consistency in class definitions but is sensitive at the pixel level, producing more visible red/yellow noise in the change map (Fig. 7). K-means, meanwhile, yields smoother maps but greater year-on-year variation in total class areas, due to its sensitivity to spectral drift and threshold shifts. This illustrates a trade-off: RF is more stable categorically, K-means spectrally.
+* **Change-detection divergence** RF shows a +14.1 % increase in urban area, while K-means suggests a −7.8 % decrease. The RF model, trained on static labels, offers consistency in class definitions but is sensitive at the pixel level, producing more visible red/yellow noise in the change map (Fig. 8). K-means, meanwhile, yields smoother maps but greater year-on-year variation in total class areas, due to its sensitivity to spectral drift and threshold shifts. This illustrates a trade-off: RF is more stable categorically, K-means spectrally.
 
 #### 5.3  Limitations
 * **Label dependence (RF)** Sub-classes are collapsed to the labels present in ESA WorldCover.  

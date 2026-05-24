@@ -206,7 +206,7 @@ A short walk-through (7 min) covering data, code and results is available on You
 ---
 
 ## 8  References & Acknowledgements
-This repository was developed as a final project for the UCL undergraduate module **GEOL0069 Artificial Intelligence for Earth Observation**.  
+This repository was developed as a final project for the UCL postgraduate module **GEOL0069 Artificial Intelligence for Earth Observation**.  
 Special thanks to **Dr Michel Tsamados**, **Weibin Chen** and **Connor Nelson** for the original notebooks and teaching materials that formed the basis for this work.
 
 ### 8.1  Reference List 

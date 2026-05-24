@@ -178,11 +178,11 @@ This project incorporates environmental accountability by tracking the computati
 
 *Assumptions: 20 W CPU, 0.325 kg CO₂/kWh (Netherlands grid average), €0.35/kWh.*
 
-At just under **1 g CO₂e**, the entire analysis emitted less than:
+At just under **2 g CO₂e**, the entire analysis emitted less than:
 
-- 1 minute of HD video streaming
-- Boiling ⅒ of a kettle
-- Driving ~5 meters in a petrol car
+- 2 minute of HD video streaming
+- Boiling a small cup of water 
+- Driving ~8 meters in a petrol car
 
 #### 6.1  Context and Mitigation  
 * **Efficient compute:**  Executed on CPU-only Google Colab sessions (<12 min), using carbon-neutral infrastructure with no GPU or fine-tuning.
@@ -201,7 +201,7 @@ Ultimately, while this project’s carbon footprint is scientifically negligible
 
 ## 7  Walk-through Video
 A short walk-through (7 min) covering data, code and results is available on YouTube:  
-[![Walk-through Video](youtube.png)](https://youtu.be/j8I243RFyBA)
+[![Walk-through Video](Figures/youtube.png)](https://youtu.be/j8I243RFyBA)
 
 ---
 
